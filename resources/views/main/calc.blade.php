@@ -37,4 +37,7 @@
 </div>
 </div>
 </div>
+<form action="{{ route('result', ['numb' => $ret]) }}" method="post">
+<input type='submit' value='pressme'>
+</form>
 @endsection
