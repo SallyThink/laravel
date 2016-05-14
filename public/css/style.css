@@ -1,0 +1,12 @@
+body{
+	background-color: rgb(240,240,240);
+}
+.carousel-inner{
+	font-size: 120px;
+}
+.dropdown{
+	float: left;
+}
+.btn-info{
+	border-radius: 0px;
+}
