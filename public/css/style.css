@@ -10,3 +10,6 @@ body{
 .btn-info{
 	border-radius: 0px;
 }
+.form-inline {
+	padding:30px;
+}
