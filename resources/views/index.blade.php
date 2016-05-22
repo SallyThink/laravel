@@ -21,7 +21,7 @@
               <div class="row">
                 
                 <div class="col-lg-5">
-                  <h1><a href="#">DefaultBlog</a></h1> 
+                  <h1><a href="{{url('index')}}">DefaultBlog</a></h1> 
                 </div>
 				<form class="form-inline col-lg-7 col-lg-push-2" role="form">
 					<div class="form-group">
@@ -46,7 +46,7 @@
             
             <div id="navbarCollapse" class="collapse navbar-collapse navbar-right">
               <ul class="nav nav-pills">
-                <li class="active"> <a href="index.html">Blog</a> </li>
+                <li class="active"> <a href="">Blog</a> </li>
                 <li> <a href="rating.html">Registration</a> </li>
                 <li> <a href="contact.html">Contacts</a> </li>
               </ul>
