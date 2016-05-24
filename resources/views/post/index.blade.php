@@ -6,6 +6,7 @@
  <link href="{{ asset('bootstrap-3.3.6-dist/css/bootstrap.min.css') }}" rel="stylesheet">
  <script src="{{ asset('bootstrap-3.3.6-dist/js/bootstrap.min.js') }}"></script>
  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+     <script src="{{ asset('js/jquery.js') }}"></script>
 </head>
 <body>
  <div class="container-fluid">
@@ -17,10 +18,10 @@
             <div class="container">
               <div class="row">
 
-                <div class="col-lg-5">
+                <div class="col-lg-4">
                   <h1><a href="{{url('index')}}">DefaultBlog</a></h1> 
                 </div>
-				<form class="form-inline col-lg-7 col-lg-push-2" role="form">
+				<form class="form-inline col-lg-6 col-lg-push-2" role="form">
 					<div class="form-group">
 						<label class="sr-only" for="exampleInputEmail2">Login</label>
 							<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
@@ -51,7 +52,7 @@
        </nav>
       </div>
     <div class="row">
-        <div class="col-lg-12 col-lg-push-9">
+        <div class="col-lg-3 col-lg-push-9">
             <ul class="nav nav-pills">
                 <li class="active"> <a href="{{url('post/newpost')}}">New Post</a> </li>
                 <li class="active"> <a href="{{url('post/history')}}">History</a> </li>
