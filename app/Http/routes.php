@@ -1,7 +1,6 @@
 <?php
 
-Route::any('/{one}/{two}/{three}','menu@main');
-Route::any('result-{numb}',['uses'=>'menu@result', 'as'=>'result']);
-Route::any('/',['uses'=>'MainPageController@mainpage']);
-Route::any('/index',['uses'=>'MainPageController@index']);
-Route::any('{q}',['uses'=>'MainPageController@four']);
+Route::get('/',['uses'=>'PostController@index']);
+Route::get('/post/newpost',['uses'=>'PostController@newpost']);
+Route::post('/post/newpost',['uses'=>'PostController@publishedpost','as'=>'publishedpost']);
+Route::get('post/history',['uses'=>'PostController@history']);

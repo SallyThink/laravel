@@ -13,13 +13,10 @@
        
        <nav role="navigation" class="navbar navbar-inverse">
           <div class="container">
-
           <div class="navbar-header header">
-
             <div class="container">
-              
               <div class="row">
-                
+
                 <div class="col-lg-5">
                   <h1><a href="{{url('index')}}">DefaultBlog</a></h1> 
                 </div>
@@ -43,22 +40,26 @@
               <span class="icon-bar"></span>
             </button>
           </div>
-            
             <div id="navbarCollapse" class="collapse navbar-collapse navbar-right">
               <ul class="nav nav-pills">
                 <li class="active"> <a href="">Blog</a> </li>
                 <li> <a href="rating.html">Registration</a> </li>
                 <li> <a href="contact.html">Contacts</a> </li>
               </ul>
-
-
             </div>
-
           </div>
-       </nav> 
-
+       </nav>
       </div>
+    <div class="row">
+        <div class="col-lg-12 col-lg-push-9">
+            <ul class="nav nav-pills">
+                <li class="active"> <a href="{{url('post/newpost')}}">New Post</a> </li>
+                <li class="active"> <a href="{{url('post/history')}}">History</a> </li>
+            </ul>
+        </div>
     </div>
+     @yield('container')
+ </div>
 
 </body>
 </html>
