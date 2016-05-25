@@ -12,6 +12,10 @@ class PostController extends Controller
     public function index(){
         return view('post.index');
     }
+    public function selectpost($id){
+       $all=Post::where('id',$id)->get();
+        return view('post.select',compact('all'));
+    }
     public function newpost(){
         return view('post.newpost');
     }

@@ -9,7 +9,7 @@
 @foreach($all as $post)
     <div class="col-lg-10 col-lg-push-1">
     <div class="panel panel-<? echo $array[array_rand($array,'1')]?>">
-        <div class="panel-heading">{{ $post->title }}<div class="text-right">{{ $post->created_at }}</div></div>
+        <div class="panel-heading"><a href="{{$post->id}}">{{ $post->title }}</a><div class="text-right">{{ $post->created_at }}</div></div>
         <div class="panel-body">
             {{$post->text}}
         </div>
