@@ -10,4 +10,11 @@ class Post extends Model
         'title',
         'text'
     ];
+    public function getSelectPost($id){
+        return $this->where('id',$id)->get();
+    }
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
 }
