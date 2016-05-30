@@ -8,6 +8,9 @@ body{
 	border-radius: 0px;
 	margin:0px;
 }
+#hello{
+	color:white;
+}
 .modalwindow{
 	display: none;
 	position: absolute;

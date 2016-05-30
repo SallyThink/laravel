@@ -21,11 +21,23 @@ class PostRequest extends Request
      *
      * @return array
      */
-    public function rules()
+   /* public function rules()
     {
-        return [
+        $rules=[
             'title'=>'required|min:3',
             'text'=>'required'
         ];
+        return $rules;
+    }*/
+    public function rules()
+    {
+        $rules =  [
+            'title'             => 'required',
+            'text'           => 'required'
+        ];
+        if($this->isMethod('post') and $this->is("post/showeditpost")){
+            $rules['title'] = 'required'.$this->post->id;
+        }
+        return $rules;
     }
 }

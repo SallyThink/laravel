@@ -16,7 +16,7 @@
         <div class='text-right'>
             <form method="post">
                 <input type="hidden" name="id" value="{{ $post->id }}">
-                <button class="btn btn-warning" name="edit" formaction="{{ url('post/showeditpost') }}">Edit</button>
+                <button class="btn btn-warning" name="edit" formaction="{{ url('post/showeditpost') }}/{{ $post->id }}">Edit</button>
                 <button class="btn btn-danger modaljquery" name="delete" formaction="{{ url('post/delete')}}">Delete</button>
                 <input type="hidden" name="_token" value="{{{ csrf_token() }}}">
                 <div class="modalwindow text-center">

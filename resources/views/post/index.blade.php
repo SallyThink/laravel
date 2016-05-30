@@ -19,8 +19,9 @@
               <div class="row">
 
                 <div class="col-lg-4">
-                  <h1><a href="{{url('index')}}">DefaultBlog</a></h1> 
+                  <h1><a href="{{url('index')}}">DefaultBlog</a></h1>
                 </div>
+                  @if(Auth::guest())
 				<form class="form-inline col-lg-6 col-lg-push-2" role="form">
 					<div class="form-group">
 						<label class="sr-only" for="exampleInputEmail2">Login</label>
@@ -32,6 +33,18 @@
 					</div>
 					<button type="submit" class="btn btn-primary">Let`s Go</button>
 				</form>
+                  @else
+                      <div class="col-lg-6 col-lg-push-6">
+                          <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                  <h2 id="hello">Hello {{ Auth::user()->name }}</h2>
+                              </a>
+                              <ul class="dropdown-menu" role="menu">
+                                  <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                              </ul>
+                          </li>
+                      </div>
+                  @endif
               </div>
             </div>
             <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
