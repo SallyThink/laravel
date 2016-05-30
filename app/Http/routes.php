@@ -9,3 +9,10 @@ Route::post('post/delete',['uses'=>'PostController@delete']);
 Route::post('post/editpost',['uses'=>'PostController@editpost']);
 Route::post('post/addcomment',['uses'=>'CommentController@addcomment', 'as'=>'addcomment']);
 Route::any('post/{id}',['uses'=>'PostController@selectpost']);
+
+
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+

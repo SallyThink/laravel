@@ -30,6 +30,7 @@
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}">
         @if(isset($edit))
             <input type="hidden" name="id" value="{{ $id }}">
+            {{ csrf_field() }}
         <button type="submit" class="btn btn-default" formaction="{{ url('post/editpost') }}">Edit This</button>
             @else
             <button type="submit" class="btn btn-default">Send</button>
