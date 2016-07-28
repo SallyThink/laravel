@@ -19,13 +19,13 @@
               <div class="row">
 
                 <div class="col-lg-4">
-                  <h1><a href="{{url('index')}}">DefaultBlog</a></h1>
+                  <h1><a href="/">DefaultBlog</a></h1>
                 </div>
                   @if(Auth::guest())
-				<form class="form-inline col-lg-6 col-lg-push-2" role="form">
+				<form class="form-inline col-lg-6 col-lg-push-2" role="form" action="{{ url('/login') }}">
 					<div class="form-group">
 						<label class="sr-only" for="exampleInputEmail2">Login</label>
-							<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+							<input type="text" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
 					</div>
 					<div class="form-group">
 						<label class="sr-only" for="exampleInputPassword2">Pass</label>
@@ -40,6 +40,7 @@
                                   <h2 id="hello">Hello {{ Auth::user()->name }}</h2>
                               </a>
                               <ul class="dropdown-menu" role="menu">
+                                  <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-sign-out"></i>Profile</a></li>
                                   <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                               </ul>
                           </li>
@@ -57,13 +58,14 @@
             <div id="navbarCollapse" class="collapse navbar-collapse navbar-right">
               <ul class="nav nav-pills">
                 <li class="active"> <a href="">Blog</a> </li>
-                <li> <a href="rating.html">Registration</a> </li>
+                <li> <a href="{{ url('register') }}">Registration</a> </li>
                 <li> <a href="contact.html">Contacts</a> </li>
               </ul>
             </div>
           </div>
        </nav>
       </div>
+     @if(Auth::check())
     <div class="row">
         <div class="col-lg-3 col-lg-push-9">
             <ul class="nav nav-pills">
@@ -72,6 +74,8 @@
             </ul>
         </div>
     </div>
+     @endif
+     <br>
      @yield('container')
  </div>
 

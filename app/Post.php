@@ -8,7 +8,8 @@ class Post extends Model
 {
     protected $fillable = [
         'title',
-        'text'
+        'text',
+        'auth'
     ];
     public function getSelectPost($id){
         return $this->where('id',$id)->get();

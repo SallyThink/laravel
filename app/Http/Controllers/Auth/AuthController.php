@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use Auth;
 use App\User;
+use App\Profile;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -64,6 +65,7 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+        Profile::create(['user_id'=>$data['name']]);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

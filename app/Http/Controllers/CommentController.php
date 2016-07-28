@@ -10,7 +10,8 @@ use App\Http\Requests;
 class CommentController extends Controller
 {
     public function addcomment(CommentRequest $request){
-        Comment::create(\Request::all());
+        $request['auth']=\Auth::user()->name;
+        Comment::create($request->all());
          return redirect()->back();
         }
 }

@@ -20,7 +20,7 @@
             <div class="col-lg-8 col-lg-push-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">{{ $post->title }}</h3>
+                        <h3 class="panel-title">{{ $post->title }} <p class="text-right">by {{ $post->auth }}</p></h3>
                     </div>
                     <div class="panel-body">
                         {{ $post->text }}
@@ -44,6 +44,7 @@
             </div>
         </div>
     @endforeach
+    @if(Auth::check())
     <div class="row">
         <div class="col-lg-6 col-lg-push-3">
             <form role="form" method="post" action=" {{ route('addcomment') }}">
@@ -57,4 +58,5 @@
             </form>
         </div>
     </div>
+    @endif
 @endsection

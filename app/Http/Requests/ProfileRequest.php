@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class PostRequest extends Request
+class ProfileRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,10 +23,7 @@ class PostRequest extends Request
      */
     public function rules()
     {
-        $rules =  [
-            'title'             => 'required',
-            'text'           => 'required'
+        return [
         ];
-        return $rules;
     }
 }
